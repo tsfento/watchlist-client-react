@@ -30,7 +30,8 @@ const LoginForm = () => {
 				axios
 					.post(`${import.meta.env.VITE_API_URL}/login`, formData)
 					.then((res) => {
-						console.log(res.data.token);
+						// console.log(res.data.token);
+						localStorage.setItem('wewatch_token', res.data.token);
 					});
 			}}
 		>
